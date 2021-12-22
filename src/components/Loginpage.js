@@ -3,38 +3,13 @@ import React from 'react'
 const Loginpage = () => {
     return (
         <div>
-            <p class="ml-30 font-bold ml-32 mt-16 text-xl">Login</p>
-        
-            <div class="flex flex-wrap content-start ">
-                <div class="mt-32 ml-96">
-                    <form class="bg-white shadow-xl rounded px-8 pt-6 pb-8 mb-4">
-                    <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2 text-left" for="username">
-                        Username
-                        </label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" />
-                    </div>
-                    <div class="mb-6">
-                        <label class="block text-gray-700 text-sm font-bold mb-2 text-left" for="password">
-                        Password
-                        </label>
-                        <input class="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="***********" />
-                        
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                        Sign In
-                        </button>
-                        <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
-                        Forgot Password?
-                        </a>
-                    </div>
-                    </form>
-                    <p class="text-center text-gray-500 text-xs">
-                    &copy;2021 All rights reserved.
-                    </p>
-                </div>
-          </div>
+            <form onSubmit={this.handleSubmit}>
+                <label htmlFor="email">Email</label>
+                <input name="email" type="text" placeholder="Enter your email" value={email} onChange={this.handleChange}/>
+                <label htmlFor="email">Password</label>
+                <input name="password" type="password" placeholder="Enter your password" value={password} onChange={this.handleChange}/>
+                <button type="submit">Login</button>
+            </form>
 
           <div class="flex-1 h-full max-w-4xl mx-auto bg-white rounded-lg shadow-xl">
                 <div class="flex flex-col md:flex-row">
