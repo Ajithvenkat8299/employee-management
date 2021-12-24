@@ -64,6 +64,9 @@ const Loginpage = () => {
                     </div>
                 </div>
         </div>
+        <div>
+            <img class="w-full" src="img/Original-Trans-low.png"/>
+        </div>
         </div>
     )
 }
